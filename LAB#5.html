@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна работа №5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
+</head>
+<style>
+    .header-h1 {
+        position: relative;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .header-h1 h1 {
+        display: inline-block;
+        background: #fff;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .header-h1::after {
+        content: "";
+        position: absolute;
+        background: #212529;
+        height: .25rem;
+        left: 15%;
+        top: 50%;
+        width: 70%;
+        transform: translateY(-50%);
+        z-index: -999;
+    }
+
+    .header-h2 {
+        position: relative;
+        margin-bottom: 1rem;
+        text-align: center;
+        z-index: 0;
+    }
+    .header-h2 h2 {
+        display: inline-block;
+        background: #ccc;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        z-index: 1;
+    }
+
+    .header-h2::after {
+        content: "";
+        position: absolute;
+        background: #212529;
+        height: .25rem;
+        left: 25%;
+        top: 50%;
+        width: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
+    .progress {
+        background-color: #888!important;
+        border-radius: 0;
+    }
+
+    .product-device {
+        position: absolute;
+        right: 10%;
+        bottom: -30%;
+        width: 300px;
+        height: 540px;
+        background-color: #333;
+        border-radius: 21px;
+        transform: rotate(30deg);
+    }
+
+    .product-device::before {
+        position: absolute;
+        top: 10%;
+        right: 10px;
+        bottom: 10%;
+        left: 10px;
+        content: "";
+        background-color: rgba(255, 255, 255, .1);
+        border-radius: 5px;
+    }
+
+    .product-device-2 {
+        top: -25%;
+        right: auto;
+        bottom: 0;
+        left: 5%;
+        background-color: #e5e5e5;
+    }
+
+    .carousel-indicators button {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+</style>
+<body>
+<header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
+                     viewBox="0 0 24 24">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                </svg>
+                <strong>Album</strong>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-info bg-gradient">
+                    <div class="col-md-5 p-lg-5 mx-auto my-5">
+                        <h1 class="display-4 fw-normal">Punny headline</h1>
+                        <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this
+                            example based on Apple’s marketing pages.</p>
+                        <a class="btn btn-outline-primary" href="#">Coming soon</a>
+                    </div>
+                    <div class="product-device shadow-sm d-none d-md-block"></div>
+                    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-info bg-gradient">
+                    <div class="col-md-5 p-lg-5 mx-auto my-5">
+                        <h1 class="display-4 fw-normal">Punny headline</h1>
+                        <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this
+                            example based on Apple’s marketing pages.</p>
+                        <a class="btn btn-outline-primary" href="#">Coming soon</a>
+                    </div>
+                    <div class="product-device shadow-sm d-none d-md-block"></div>
+                    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-info bg-gradient">
+                    <div class="col-md-5 p-lg-5 mx-auto my-5">
+                        <h1 class="display-4 fw-normal">Punny headline</h1>
+                        <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this
+                            example based on Apple’s marketing pages.</p>
+                        <a class="btn btn-outline-primary" href="#">Coming soon</a>
+                    </div>
+                    <div class="product-device shadow-sm d-none d-md-block"></div>
+                    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container marketing text-center">
+        <div class="header-h1"><h1 class="display-4 fw-normal">Punny headline</h1></div>
+        <div class="row">
+            <div class="col-lg-4">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#777"/>
+                    <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                </svg>
+
+                <h2 class="text-primary">Heading</h2>
+                <p>Some representative placeholder content for the three columns of text below the carousel. This is the
+                    first column.</p>
+                <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#777"/>
+                    <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                </svg>
+
+                <h2 class="text-primary">Heading</h2>
+                <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second
+                    column.</p>
+                <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#777"/>
+                    <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                </svg>
+
+                <h2 class="text-primary">Heading</h2>
+                <p>And lastly this, the third column of representative placeholder content.</p>
+                <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="container py-2 bg-light" style="background-color: #ccc!important;">
+    <div class="text-center">
+        <div class="header-h2"><h2 class="display-6 fw-normal">ABOUT</h2></div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col col-sm-3">
+            <div class="">
+                <h5 class="fw-bold">Custom jumbotron</h5>
+                <p class="fs-6">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+            </div>
+            <h5 class="text-primary">Features</h5>
+            <ul class="list-unstyled text-small">
+                <li class="py-1"><div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">43vvervsrv</div>
+                </div></li>
+                <li class="py-1"><div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">fgxthvdtvdt</div>
+                </div></li>
+                <li class="py-1"><div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">5f45gv</div>
+                </div></li>
+                <li class="py-1"><div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 78%;" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">dcxrgzxfg</div>
+                </div></li>
+            </ul>
+        </div>
+        <div class="col col-sm-3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d572.5111958598407!2d35.055714293126556!3d48.460193133724076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1623356749813!5m2!1suk!2sua" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
